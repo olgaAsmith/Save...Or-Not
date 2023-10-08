@@ -6,7 +6,7 @@ import styles from './Header.module.sass';
 export default function Header() {
   return (
     <header className={styles.header}>
-      <Link href='#' className={`${styles.header__logo} link`}></Link>
+      <Link href='#' className={`${styles.header__logo} link logo`}></Link>
       <Navigation />
       <div className={styles.header__content}>
         <select name="lang" id="lang-select">
@@ -27,3 +27,4 @@ export default function Header() {
     </header>
   );
 }
+
