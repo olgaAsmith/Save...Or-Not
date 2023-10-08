@@ -1,13 +1,8 @@
 import Header from '@/components/header/Header';
 import './globals.sass';
 import type { Metadata } from 'next';
-import { Open_Sans } from 'next/font/google';
 import Footer from '@/components/footer/Footer';
-
-const openSans = Open_Sans({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['400', '700'],
-});
+import { openSans } from '@/utils/fonts';
 
 export const metadata: Metadata = {
   title: 'Save...Or-Not',
@@ -21,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={openSans.className}>
+      <body className={`${openSans.className}`}>
         <div className='app'>
           <Header />
           {children}
