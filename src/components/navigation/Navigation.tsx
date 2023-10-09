@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import styles from './Navigation.module.sass'
-import linkStyles from '../../app/page.module.sass'
-
 
 export default function Navigation() {
   return (
@@ -17,7 +15,7 @@ export default function Navigation() {
           <Link className='link' href="./features">Game features</Link>
         </li>
         <li>
-          <Link className='link' href="./requirments">System requirements</Link>
+          <Link className='link' href="./requirements">System requirements</Link>
         </li>
         <li>
           <Link className='link' href="./quotes">Quotes</Link>
