@@ -1,26 +1,36 @@
-import Link from 'next/link'
-import styles from './Navigation.module.sass'
+import Link from "next/link";
+import styles from "./Navigation.module.sass";
 
 export default function Navigation() {
   return (
     <nav className={styles.nav}>
       <ul className={styles.header__menu}>
         <li>
-          <Link className='link' href="./">Main</Link>
+          <Link className="link" href="./">
+            Main
+          </Link>
         </li>
         <li>
-          <Link className='link' href="./about">About</Link>
+          <Link className="link" href="./about">
+            About
+          </Link>
         </li>
         <li>
-          <Link className='link' href="./features">Game features</Link>
+          <Link className="link" href="./features">
+            Game features
+          </Link>
         </li>
         <li>
-          <Link className='link' href="./requirements">System requirements</Link>
+          <Link className="link" href="./requirements">
+            System requirements
+          </Link>
         </li>
         <li>
-          <Link className='link' href="./quotes">Quotes</Link>
+          <Link className="link" href="./quotes">
+            Quotes
+          </Link>
         </li>
       </ul>
     </nav>
-  )
+  );
 }

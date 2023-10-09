@@ -1,12 +1,12 @@
-import { Open_Sans } from 'next/font/google';
-import { Bebas_Neue } from 'next/font/google';
+import { Open_Sans } from "next/font/google";
+import { Bebas_Neue } from "next/font/google";
 
 export const openSans = Open_Sans({
-    subsets: ['latin'],
-    weight: ['400', '700'],
-  });
-  
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
 export const bebas = Bebas_Neue({
-    subsets: ['latin'],
-    weight: ['400'],
-  });
+  subsets: ["latin"],
+  weight: ["400"],
+});
