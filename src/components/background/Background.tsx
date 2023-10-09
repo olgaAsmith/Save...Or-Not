@@ -9,12 +9,12 @@ export default function Background() {
   const pathname = usePathname();
 
   return (
-    <div className={styles.background}>
-      {pathname === `/` ? (
-        <Image src={bg} alt="SOS Heroes" layout="fill" objectFit="cover" />
-      ) : (
-        ""
-      )}
-    </div>
+  <div className={styles.background}>
+    {pathname === `/` ? (
+    <Image src={bg} alt="SOS Heroes" layout="fill" objectFit="cover" />
+    ) : (
+    ""
+    )}
+  </div>
   );
 }

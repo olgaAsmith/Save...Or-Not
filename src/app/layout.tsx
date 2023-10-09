@@ -16,15 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${openSans.className}`}>
-        <div className="app">
-          <Background />
-          <Header />
-          {children}
-          <Footer />
-        </div>
-      </body>
-    </html>
+  <html lang="en">
+    <body className={`${openSans.className}`}>
+    <div className="app">
+      <Background />
+      <Header />
+      {children}
+      <Footer />
+    </div>
+    </body>
+  </html>
   );
 }
