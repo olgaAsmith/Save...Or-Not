@@ -5,6 +5,7 @@
     height: 876px
     background-image: url('../../images/bg_image3.jpg')
     background-size: contain
+    background-repeat: no-repeat 
     display: flex
 
 .features__container
@@ -12,7 +13,7 @@
 
 .features__content
     width: 50%
-    margin-left: 75px
+    margin-left: 200px
 
 .features__subtitle
     margin-top: 171px
@@ -56,7 +57,15 @@
     line-height: 22px
     width: 362px
 
+
+.features__item
+    position: relative
+
 .features__circle
+    position: absolute
+    left: -32px
+    top: 12px
+    display: block
     width: 14px
     height: 14px
     border-radius: 50%
@@ -64,7 +73,11 @@
 
 
 .features__line
+    position: absolute
+    left: -32px
+    top: 12px
+    display: block
     width: 2px
-    height: 140px
+    height: 135%
     background-color: #fff
     margin-left: 6px
