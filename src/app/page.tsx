@@ -12,9 +12,9 @@ export default function Main() {
     Experience new social battle royale game
     </h2>
     <button className={`${styles.main__button} button`}>
-    <h3 className={`${styles.main__minititle} ${openSans.className}`}>
+    <p className={`${styles.main__minititle} ${openSans.className}`}>
       Buy Now on Steam
-    </h3>
+    </p>
     <div className="splitter splitter_brown"></div>
     <p className={`${styles.main__price} ${openSans.className}`}>$14.99</p>
     </button>
