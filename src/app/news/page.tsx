@@ -15,7 +15,7 @@ export default function News() {
       />
     </div>
     <div className={`${styles.subscribe__content}`}>
-    <p className={`${bebas.className} ${styles.subscribe__subtitle}`}>Want to stay in touch?</p>
+    <h3 className={`${bebas.className} ${styles.subscribe__subtitle}`}>Want to stay in touch?</h3>
     <h2 className={`${bebas.className} ${styles.subscribe__title}`}>newsletter SUBSCRIBE </h2>
     <p className={`${styles.subscribe__text} text`}>
       In order to start receiving our news, all you have to do is enter your

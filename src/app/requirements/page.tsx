@@ -4,9 +4,9 @@ import { bebas } from "@/utils/fonts";
 export default function Requirements() {
   return (
   <section className={styles.requirements}>
-    <p className={`${bebas.className} ${styles.requirements__subtitle}`}>
+    <h3 className={`${bebas.className} ${styles.requirements__subtitle}`}>
     Can My Computer Run this game?
-    </p>
+    </h3>
     <h2 className={`${bebas.className} ${styles.requirements__title}`}>
     system requirements
     </h2>

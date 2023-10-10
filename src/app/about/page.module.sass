@@ -1,0 +1,94 @@
+.about
+    width: calc( 1000% - 240px )
+    max-width: 1200px
+    min-height: 800px
+    display: flex
+    margin: auto
+    padding-top: 200px
+    background-image: url('../../images/bg2.jpg')
+    background-size: contain
+    background-repeat: no-repeat 
+
+.about__content
+    width: 50%
+    height: 610px
+
+.about__subtitle
+    margin-top: 76px
+
+.about__title
+    margin-top: 8px
+
+.about__line
+    width: 100%
+    height: 2px
+    background-color: #fff
+
+.about__text
+    width: 364px
+    margin-top: 24px
+    margin-left: 180px
+    text-align: justify
+
+.about__gallery
+    position: relative
+    margin-left: 13px
+
+.about__image
+    position: absolute
+    border-radius: 6px
+
+.about__image_first
+    top: 0
+    left: 0
+    z-index: 5
+    width: 502px
+    height: 610px
+
+.about__image_second
+    top: 30px
+    left: 110px
+    width: 438px
+    height: 560px
+    z-index: 4
+
+
+.about__image_third
+    top: 48px
+    left: 110px
+    width: 438px
+    height: 512px
+    z-index: 3
+
+.about__toggler
+    position: absolute
+    left: 83px
+    bottom: 30px
+    display: flex
+    gap: 54px
+    z-index: 6
+
+.about__switcher
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    background-color: #fff
+    border: none
+    cursor: pointer
+    transition: opacity .3s
+    &:hover
+        opacity: .6
+
+.about__arrow
+    cursor: pointer
+    background-image: url('../../images/switch.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    height: 34px
+    width: 16px
+    position: absolute
+    right: 10px
+    top: calc( 50% - 17px )
+    transition: opacity .3s
+    &:hover
+        opacity: .6
