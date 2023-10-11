@@ -69,15 +69,18 @@
     z-index: 6
 
 .about__switcher
-    width: 14px
-    height: 14px
+    width: 15px
+    height: 15px
     border-radius: 50%
-    background-color: #fff
-    border: none
+    border: 2px solid #fff
+    background-color: transparent
     cursor: pointer
     transition: opacity .3s
     &:hover
         opacity: .6
+
+.about__switcher_active
+    background-color: #fff
 
 .about__arrow
     cursor: pointer

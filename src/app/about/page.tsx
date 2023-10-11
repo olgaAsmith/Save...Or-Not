@@ -43,11 +43,11 @@ solo or form friendships with others to escape? </p>
       </div>
       <div className={styles.about__arrow}></div>
       <div className={styles.about__toggler}>
-        <button className={styles.about__switcher}></button>
-        <button className={styles.about__switcher}></button>
-        <button className={styles.about__switcher}></button>
-        <button className={styles.about__switcher}></button>
-        <button className={styles.about__switcher}></button>
+        <button className={`${styles.about__switcher}`}></button>
+        <button className={`${styles.about__switcher}`}></button>
+        <button className={`${styles.about__switcher}`}></button>
+        <button className={`${styles.about__switcher} ${styles.about__switcher_active}`}></button>
+        <button className={`${styles.about__switcher}`}></button>
       </div>
     </div>
   </section>
