@@ -2,7 +2,7 @@ import styles from "./page.module.sass";
 import { bebas } from "@/utils/fonts";
 import { openSans } from "@/utils/fonts";
 
-export default function Main() {
+const Main = () => {
   return (
     <main className={styles.main}>
       <h1 className={`${styles.main__title} ${bebas.className}`}>
@@ -21,3 +21,5 @@ export default function Main() {
     </main>
   );
 }
+
+export default Main;

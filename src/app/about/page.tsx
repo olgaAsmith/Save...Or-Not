@@ -7,7 +7,7 @@ import galleryImage4 from "@/images/gallery_image.jpg";
 import galleryImage5 from "@/images/gallery_image2.jpg";
 import { bebas } from "@/utils/fonts";
 
-export default function About() {
+const About = () => {
   return (
     <section className={styles.about}>
       <div className={styles.about__content}>
@@ -64,3 +64,5 @@ export default function About() {
     </section>
   );
 }
+
+export default About;

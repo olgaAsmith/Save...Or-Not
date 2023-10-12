@@ -3,7 +3,7 @@ import Image from "next/image";
 import skull from "@/images/skull.jpg";
 import { bebas } from "@/utils/fonts";
 
-export default function News() {
+const News = () => {
   return (
     <section className={styles.subscribe}>
       <div>
@@ -42,3 +42,5 @@ export default function News() {
     </section>
   );
 }
+
+export default News;

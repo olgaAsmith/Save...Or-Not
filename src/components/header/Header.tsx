@@ -2,7 +2,7 @@ import Link from "next/link";
 import Navigation from "../navigation/Navigation";
 import styles from "./Header.module.sass";
 
-export default function Header() {
+const Header = () => {
   return (
     <header className={styles.header}>
       <Link href="#" className={`${styles.header__logo} link logo`}></Link>
@@ -32,3 +32,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;

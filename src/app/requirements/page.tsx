@@ -1,7 +1,7 @@
 import styles from "./page.module.sass";
 import { bebas } from "@/utils/fonts";
 
-export default function Requirements() {
+const Requirements = () => {
   return (
     <section className={styles.requirements}>
       <h3 className={`${bebas.className} ${styles.requirements__subtitle}`}>
@@ -56,3 +56,5 @@ export default function Requirements() {
     </section>
   );
 }
+
+export default Requirements;

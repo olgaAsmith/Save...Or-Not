@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./Navigation.module.sass";
 
-export default function Navigation() {
+const Navigation = () => {
   return (
     <nav className={styles.nav}>
       <ul className={styles.header__menu}>
@@ -39,3 +39,5 @@ export default function Navigation() {
     </nav>
   );
 }
+
+export default Navigation;

@@ -5,7 +5,7 @@ import Image from "next/image";
 import bg from "../../images/bg.jpg";
 import { usePathname } from "next/navigation";
 
-export default function Background() {
+const Background = () => {
   const pathname = usePathname();
 
   return (
@@ -18,3 +18,5 @@ export default function Background() {
     </div>
   );
 }
+
+export default Background;

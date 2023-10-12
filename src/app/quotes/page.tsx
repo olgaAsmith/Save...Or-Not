@@ -6,19 +6,18 @@ import { bebas } from "@/utils/fonts";
 import { initialQuotes } from "@/utils/quotes/quotes";
 import { useEffect, useState } from "react";
 
-export default function Quotes() {
+const Quotes = () => {
   const [quotes, setQuotes] = useState(initialQuotes);
   const [isRound, setIsRound] = useState(false);
 
-
   useEffect(() => {
-    setIsRound(true)
+    setIsRound(true);
   }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       const firstElement = quotes[0];
-      quotes.shift(); 
+      quotes.shift();
       quotes.push(firstElement);
       setQuotes([...quotes]);
     }, 5000);
@@ -49,10 +48,22 @@ export default function Quotes() {
         </div>
         <ul className={`${styles.quotes__blocks}`}>
           {quotes.map((quote) => {
-            return <QuotesTwits key={quote.id} {...quote} isRound={isRound} />;
+            return (
+              <QuotesTwits
+                key={quote.id}
+                name={quote.name}
+                avatar={quote.avatar}
+                about={quote.about}
+                message={quote.message}
+                data={quote.data}
+                isRound={isRound}
+              />
+            );
           })}
         </ul>
       </div>
     </section>
   );
 }
+
+export default Quotes;

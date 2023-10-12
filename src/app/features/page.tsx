@@ -1,7 +1,7 @@
 import styles from "./page.module.sass";
 import { bebas } from "@/utils/fonts";
 
-export default function Features() {
+const Features = () => {
   return (
     <section className={styles.features}>
       <div className={styles.features__container}></div>
@@ -50,3 +50,5 @@ export default function Features() {
     </section>
   );
 }
+
+export default Features;
