@@ -17,6 +17,7 @@
 
 .header__content
   display: flex
+  align-items: center
   gap: 21px
 
 .header__refs
@@ -33,3 +34,52 @@
 
 .link_steam
   background-image: url('../../images/steam.svg')
+
+.select
+  position: relative
+  width: 43px
+  height: 17px
+  font-size: 12px
+  font-weight: 700
+  line-height: normal
+  letter-spacing: 1.2px
+  text-transform: uppercase
+
+.select_active
+  display: block
+
+.select__header
+  display: flex
+  justify-content: space-between
+  cursor: pointer
+  align-items: center
+
+.select__icon
+  height: 6px
+  width: 9px
+  background-image: url('../../images/dropdown.svg')
+  background-repeat: no-repeat
+  background-position: center
+
+.select__body
+  box-sizing: border-box
+  position: absolute
+  background-color: #010101
+  top: calc( 100% + 9px )
+  left: -8px
+  width: 54px
+  height: 65.597px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 5.6px 19.65px 4.99px 6.35px
+  display: none
+  
+.select__body_active
+  display: block
+
+.select__item
+  cursor: pointer
+  transition: color .5s
+  &:hover
+    color: #FFB548
