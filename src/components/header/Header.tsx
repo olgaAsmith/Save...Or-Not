@@ -1,13 +1,26 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import Navigation from "../navigation/Navigation";
 import styles from "./Header.module.sass";
-import { useState } from "react";
+import { useState, MouseEvent } from "react";
 
 const Header = () => {
+  const [toggleOpen, setToggleOpen] = useState(false);
+  const [selectedValue, setSelectedValue] = useState("Eng");
 
-  const [isSelectActive, setIsSelectActive] = useState(false)
+  const clickOnSelect = () => {
+    setToggleOpen(!toggleOpen);
+  };
+
+  //* change items from current to chosen and
+  const clickOnSelectItem = (e: MouseEvent<HTMLElement>) => {
+    const prevValue = selectedValue;
+    const nextValue = (e.target as HTMLInputElement).textContent || "";
+    setSelectedValue(nextValue);
+    (e.target as HTMLInputElement).textContent = prevValue;
+    setToggleOpen(false);
+  };
 
   return (
     <header className={styles.header}>
@@ -15,14 +28,24 @@ const Header = () => {
       <Navigation />
       <div className={styles.header__content}>
         <div className={`${styles.select}`}>
-          <div className={styles.select__header}>
-            <span className={styles.select__current}>Eng</span>
+          <div onClick={clickOnSelect} className={styles.select__header}>
+            <span className={styles.select__current}>{selectedValue}</span>
             <div className={styles.select__icon}></div>
           </div>
-          <div className={`${styles.select__body} ${isSelectActive ? styles.select__body_active : ''}`}>
-            <div className={styles.select__item}>Rus</div>
-            <div className={styles.select__item}>Fra</div>
-            <div className={styles.select__item}>Deu</div>
+          <div
+            className={`${styles.select__body} ${
+              toggleOpen ? styles.select__body_active : ""
+            }`}
+          >
+            <div onClick={clickOnSelectItem} className={styles.select__item}>
+              Rus
+            </div>
+            <div onClick={clickOnSelectItem} className={styles.select__item}>
+              Fra
+            </div>
+            <div onClick={clickOnSelectItem} className={styles.select__item}>
+              Deu
+            </div>
           </div>
         </div>
         <div className="splitter splitter_white"></div>
@@ -43,6 +66,6 @@ const Header = () => {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import styles from './page.module.sass';
-import { bebas } from '@/utils/fonts';
-import { featuresData } from '@/utils/consts/features';
+import { useEffect, useState } from "react";
+import styles from "./page.module.sass";
+import { bebas } from "@/utils/fonts";
+import { featuresData } from "@/utils/consts/features";
 const Features = () => {
   const [isTextVisible, setIsTextVisible] = useState(false);
   const [isCircleActive, setIsCircleActive] = useState(false);
@@ -66,20 +66,20 @@ const Features = () => {
                 className={`${styles.features__circle} ${
                   activeIndex === index && isCircleActive
                     ? styles.features__circle_active
-                    : ''
+                    : ""
                 }`}
               ></span>
               {index === 0 ? (
                 <span
                   className={`
                   ${styles.features__line}
-                  ${isLineFirstMove ? styles.features__line_move_first : ''}
-                  ${isLineSecondMove ? styles.features__line_move_second : ''}
-                  ${isLineThirdMove ? styles.features__line_move_third : ''}
+                  ${isLineFirstMove ? styles.features__line_move_first : ""}
+                  ${isLineSecondMove ? styles.features__line_move_second : ""}
+                  ${isLineThirdMove ? styles.features__line_move_third : ""}
                 `}
                 ></span>
               ) : (
-                ''
+                ""
               )}
             </li>
           ))}

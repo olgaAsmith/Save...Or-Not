@@ -55,6 +55,6 @@ const Requirements = () => {
       </ul>
     </section>
   );
-}
+};
 
 export default Requirements;

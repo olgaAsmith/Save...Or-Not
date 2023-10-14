@@ -20,6 +20,6 @@ const Main = () => {
       </button>
     </main>
   );
-}
+};
 
 export default Main;
