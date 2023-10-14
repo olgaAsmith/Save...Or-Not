@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import QuotesTwits from "@/components/quotes/Quotes";
-import styles from "./page.module.sass";
-import { bebas } from "@/utils/fonts";
-import { initialQuotes } from "@/utils/quotes/quotes";
-import { useEffect, useState } from "react";
+import QuotesTwits from '@/components/quotes/Quotes';
+import styles from './page.module.sass';
+import { bebas } from '@/utils/fonts';
+import { initialQuotes } from '@/utils/consts/quotes';
+import { useEffect, useState } from 'react';
 
 const Quotes = () => {
   const [quotes, setQuotes] = useState(initialQuotes);
@@ -64,6 +64,6 @@ const Quotes = () => {
       </div>
     </section>
   );
-}
+};
 
 export default Quotes;

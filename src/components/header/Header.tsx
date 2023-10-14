@@ -8,10 +8,10 @@ const Header = () => {
       <Link href="#" className={`${styles.header__logo} link logo`}></Link>
       <Navigation />
       <div className={styles.header__content}>
-        <select name="lang" id="lang-select">
-          <option value="eng">eng</option>
-          <option value="fra">fra</option>
-          <option value="deu">deu</option>
+        <select className={styles.header__select} name="lang" id="lang-select">
+          <option className={styles.header__option} value="eng">eng</option>
+          <option className={styles.header__option} value="fra">fra</option>
+          <option className={styles.header__option} value="deu">deu</option>
         </select>
         <div className="splitter splitter_white"></div>
         <ul className={styles.header__refs}>
