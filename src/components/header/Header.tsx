@@ -17,9 +17,11 @@ const Header = () => {
   const clickOnSelectItem = (e: MouseEvent<HTMLElement>) => {
     const prevValue = selectedValue;
     const nextValue = (e.target as HTMLInputElement).textContent || "";
-    setSelectedValue(nextValue);
-    (e.target as HTMLInputElement).textContent = prevValue;
     setToggleOpen(false);
+    setSelectedValue(nextValue);
+    setTimeout(() => {
+      (e.target as HTMLInputElement).textContent = prevValue;
+    }, 1000);
   };
 
   return (
