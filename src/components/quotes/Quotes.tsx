@@ -13,7 +13,7 @@ interface QuotesTwitsProps {
   isRound: boolean;
 }
 
-const QuotesTwits: React.FC<QuotesTwitsProps> = ({
+const QuotesTwits: FC<QuotesTwitsProps> = ({
   name,
   about,
   avatar,

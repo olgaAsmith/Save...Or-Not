@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import styles from "./page.module.sass";
 import { bebas } from "@/utils/fonts";
 import { featuresData } from "@/utils/consts/features";
-const Features = () => {
+
+const Features: FC = () => {
   const [isTextVisible, setIsTextVisible] = useState(false);
   const [isCircleActive, setIsCircleActive] = useState(false);
   const [isLineFirstMove, setIsLineFirstMove] = useState(false);

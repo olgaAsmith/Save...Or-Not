@@ -1,4 +1,9 @@
-export const featuresData = [
+type Feature = {
+  title: string,
+  text: string
+}
+
+export const featuresData: string[] = [] = [
   {
     title: "SURVIVE AT ALL COSTS",
     text: "You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue chopper.",

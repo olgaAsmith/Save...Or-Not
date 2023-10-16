@@ -1,7 +1,8 @@
 import Link from "next/link";
 import styles from "./Footer.module.sass";
+import { FC } from "react";
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__block}>

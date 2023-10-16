@@ -4,8 +4,9 @@ import styles from "./Background.module.sass";
 import Image from "next/image";
 import bg from "../../images/bg.jpg";
 import { usePathname } from "next/navigation";
+import { FC } from "react";
 
-const Background = () => {
+const Background: FC = () => {
   const pathname = usePathname();
 
   return (

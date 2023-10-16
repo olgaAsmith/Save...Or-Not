@@ -1,7 +1,8 @@
 import Link from "next/link";
 import styles from "./Navigation.module.sass";
+import { FC } from "react";
 
-const Navigation = () => {
+const Navigation: FC = () => {
   return (
     <nav className={styles.nav}>
       <ul className={styles.header__menu}>

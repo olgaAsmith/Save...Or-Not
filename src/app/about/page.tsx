@@ -3,11 +3,10 @@ import Image from "next/image";
 import galleryImage1 from "@/images/gallery_image.jpg";
 import galleryImage2 from "@/images/gallery_image2.jpg";
 import galleryImage3 from "@/images/gallery_image3.jpg";
-import galleryImage4 from "@/images/gallery_image.jpg";
-import galleryImage5 from "@/images/gallery_image2.jpg";
 import { bebas } from "@/utils/fonts";
+import { FC } from "react";
 
-const About = () => {
+const About: FC = () => {
   return (
     <section className={styles.about}>
       <div className={styles.about__content}>
