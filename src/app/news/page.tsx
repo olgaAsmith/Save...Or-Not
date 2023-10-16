@@ -2,8 +2,9 @@ import styles from "./page.module.sass";
 import Image from "next/image";
 import skull from "@/images/skull.jpg";
 import { bebas } from "@/utils/fonts";
+import { FC } from "react";
 
-const News = () => {
+const News: FC = () => {
   return (
     <section className={styles.subscribe}>
       <div>

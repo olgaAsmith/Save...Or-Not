@@ -1,7 +1,8 @@
+import { FC } from "react";
 import styles from "./page.module.sass";
 import { bebas } from "@/utils/fonts";
 
-const Requirements = () => {
+const Requirements: FC = () => {
   return (
     <section className={styles.requirements}>
       <h3 className={`${bebas.className} ${styles.requirements__subtitle}`}>
