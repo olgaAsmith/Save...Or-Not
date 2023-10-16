@@ -1,8 +1,9 @@
 import styles from "./page.module.sass";
 import { bebas } from "@/utils/fonts";
 import { openSans } from "@/utils/fonts";
+import { FC } from "react";
 
-const Main = () => {
+const Main: FC = () => {
   return (
     <main className={styles.main}>
       <h1 className={`${styles.main__title} ${bebas.className}`}>

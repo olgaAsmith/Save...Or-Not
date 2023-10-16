@@ -1,10 +1,9 @@
-"use client"
+"use client";
 
 import styles from "./FeaturesList.module.sass";
 import { FC, useEffect, useState } from "react";
 import { featuresData } from "@/utils/consts/features";
 import { bebas } from "@/utils/fonts";
-
 
 const FeaturesList: FC = () => {
   const [isTextVisible, setIsTextVisible] = useState(false);
@@ -38,45 +37,45 @@ const FeaturesList: FC = () => {
       setIsLineThirdMove(true);
     }
   }, [activeIndex]);
-    return(
-<ul className={styles.features__list}>
-          {featuresData.map((feature, index) => (
-            <li className={styles.features__item} key={index}>
-              <h4 className={`${bebas.className} ${styles.features__name}`}>
-                {feature.title}
-              </h4>
-              <p
-                className={`${styles.features__text} text ${
-                  activeIndex === index && isTextVisible
-                    ? styles.features__text_visible
-                    : styles.features__text_invisible
-                }`}
-              >
-                {feature.text}
-              </p>
-              <span
-                className={`${styles.features__circle} ${
-                  activeIndex === index && isCircleActive
-                    ? styles.features__circle_active
-                    : ""
-                }`}
-              ></span>
-              {index === 0 ? (
-                <span
-                  className={`
+  return (
+    <ul className={styles.features__list}>
+      {featuresData.map((feature, index) => (
+        <li className={styles.features__item} key={index}>
+          <h4 className={`${bebas.className} ${styles.features__name}`}>
+            {feature.title}
+          </h4>
+          <p
+            className={`${styles.features__text} text ${
+              activeIndex === index && isTextVisible
+                ? styles.features__text_visible
+                : styles.features__text_invisible
+            }`}
+          >
+            {feature.text}
+          </p>
+          <span
+            className={`${styles.features__circle} ${
+              activeIndex === index && isCircleActive
+                ? styles.features__circle_active
+                : ""
+            }`}
+          ></span>
+          {index === 0 ? (
+            <span
+              className={`
                   ${styles.features__line}
                   ${isLineFirstMove ? styles.features__line_move_first : ""}
                   ${isLineSecondMove ? styles.features__line_move_second : ""}
                   ${isLineThirdMove ? styles.features__line_move_third : ""}
                 `}
-                ></span>
-              ) : (
-                ""
-              )}
-            </li>
-          ))}
-        </ul>
-    )
+            ></span>
+          ) : (
+            ""
+          )}
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default FeaturesList;

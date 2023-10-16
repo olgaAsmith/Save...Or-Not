@@ -7,8 +7,6 @@ import { FC } from "react";
 import SelectLanguage from "../SelectLanguage/SelectLanguage";
 
 const Header: FC = () => {
-  
-
   return (
     <header className={styles.header}>
       <Link href="#" className={`${styles.header__logo} link logo`}></Link>

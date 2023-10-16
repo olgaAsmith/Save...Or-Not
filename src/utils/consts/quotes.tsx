@@ -1,8 +1,18 @@
 import photo from "@/images/photo.jpg";
 import photo2 from "@/images/photo2.jpg";
 import photo3 from "@/images/photo3.jpg";
+import { StaticImageData } from "next/image";
 
-export const initialQuotes = [
+type Quote = {
+  id: number;
+  name: string,
+  about: string,
+  message: string,
+  data: string,
+  avatar: StaticImageData,
+};
+
+export const initialQuotes: Quote[] = [
   {
     id: 1,
     name: "Chris Archer",

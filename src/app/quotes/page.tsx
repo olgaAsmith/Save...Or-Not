@@ -4,9 +4,9 @@ import QuotesTwits from "@/components/quotes/Quotes";
 import styles from "./page.module.sass";
 import { bebas } from "@/utils/fonts";
 import { initialQuotes } from "@/utils/consts/quotes";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
-const Quotes = () => {
+const Quotes: FC = () => {
   const [quotes, setQuotes] = useState(initialQuotes);
   const [isRound, setIsRound] = useState(false);
 
