@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Navigation from "../navigation/Navigation";
 import styles from "./Header.module.sass";
