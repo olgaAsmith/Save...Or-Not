@@ -1,4 +1,17 @@
+@import "../../utils/styles/media"
+
 .header__menu
   width: 680px
   display: flex
   justify-content: space-between
+
+@include desktop
+  .header__menu
+    width: 480px
+    flex-wrap: wrap
+    column-gap: 30px
+    row-gap: 15px
+
+@include tablet
+  .header__menu
+    display: none

@@ -13,7 +13,7 @@ const Header: FC = () => {
       <Navigation />
       <div className={styles.header__content}>
         <SelectLanguage />
-        <div className="splitter splitter_white"></div>
+        <div className={`${styles.header__splitter} splitter splitter_white`}></div>
         <ul className={styles.header__refs}>
           <li>
             <Link

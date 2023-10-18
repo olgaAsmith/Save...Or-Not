@@ -1,3 +1,5 @@
+@import "../utils/styles/media"
+
 html
   background-color: black
   padding: 0
@@ -24,12 +26,20 @@ h1
   text-transform: uppercase
   margin: 0
   padding: 0
+
+@include desktop
+  h1
+    font-size: 60px
+    text-align: center
+
 h2
   font-size: 80px
   line-height: normal
   letter-spacing: 3px
   margin: 0
   padding: 0
+  
+
 h3
   font-size: 24px
   line-height: normal
@@ -70,10 +80,7 @@ p
   background-color: #1A1917
   height: 24px
 
-.footer__splitter
-  display: inline-block
-  height: 12px
-  opacity: 1
+
 
 .button
   width: 260px

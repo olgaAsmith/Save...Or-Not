@@ -45,13 +45,13 @@ const Footer: FC = () => {
             <a href="#" className={`${styles.footer__doc} link`}>
               Privacy Policy
             </a>
-            <div className="splitter footer__splitter"></div>
+            <div className={`${styles.footer__splitter} splitter`}></div>
           </li>
           <li className={styles.footer__item}>
             <a href="#" className={`${styles.footer__doc} link`}>
               Terms of Services
             </a>
-            <div className="splitter footer__splitter"></div>
+            <div className={`${styles.footer__splitter} splitter`}></div>
           </li>
           <li className={styles.footer__item}>
             <a href="#" className={`${styles.footer__doc} link`}>

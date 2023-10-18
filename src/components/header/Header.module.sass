@@ -1,5 +1,7 @@
+@import "../../utils/styles/media"
+
 .header 
-  width: 1200px
+  width: calc( 100% - 240px)
   display: flex
   justify-content: space-between
   align-items: center
@@ -11,6 +13,10 @@
   letter-spacing: 2.5px
   text-transform: uppercase
 
+@include desktopXL
+  .header
+    width: calc( 100% - 60px)
+
 .header__logo
   width: 56.1px
   height: 55px
@@ -19,6 +25,18 @@
   display: flex
   align-items: center
   gap: 21px
+
+@include desktopXL
+  .header__content
+      gap: 10px
+
+@include desktop
+  .header__content
+      flex-direction: column-reverse
+
+@include tablet
+  .header__content
+      display: none
 
 .header__refs
   display: flex
@@ -35,3 +53,6 @@
 .link_steam
   background-image: url('../../images/steam.svg')
 
+@include desktop
+  .header__splitter
+    display: none

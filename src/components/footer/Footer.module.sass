@@ -1,18 +1,34 @@
+@import "../../utils/styles/media"
+
 .footer
-  width: 1200px
+  width: calc( 100% - 240px)
   margin: auto
   display: flex
   flex-direction: column
   padding-bottom: 52px
+
+@include desktop
+  .footer
+    width: calc( 100% - 60px)
 
 .footer__block
   display: flex
   justify-content: space-between
   align-items: baseline
 
+@include desktop
+  .footer__block
+    flex-direction: column-reverse
+    align-items: center
+    gap: 25px
+
 .footer__logo
   width: 92px
   height: 90px
+
+@include desktop
+  .footer__logo
+    display: none
 
 .footer__list
   display: flex
@@ -41,7 +57,14 @@
   &:hover
     background-image: url('../../images/twitch-red.svg')
 
+.footer__splitter
+  display: inline-block
+  height: 12px
+  opacity: 1
 
+@include phone
+  .footer__splitter
+      display: none
 
 .footer__line
   width: 100%
@@ -55,9 +78,18 @@
   font-weight: 400
   line-height: normal
   opacity: .5
-
+@include desktop
+  .footer__rights
+    text-align: center
+    
 .footer__underlist
   gap: 8px
+
+@include phone
+  .footer__underlist
+      display: flex
+      flex-direction: column
+      align-items: center
 
 .footer__doc
   padding-right: 8px
@@ -66,6 +98,12 @@
   line-height: normal
   letter-spacing: 1.2px
   text-transform: uppercase
+
+@include tablet
+  .footer__doc
+      font-size: 11px
+      text-align: center
+      padding: 0
 
 .footer__item
   display: flex

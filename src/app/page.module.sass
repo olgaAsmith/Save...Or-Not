@@ -1,9 +1,16 @@
+@import "../utils/styles/media"
+
 .main 
-  width: 1200px
+  width: calc( 100% - 240px)
   display: flex
   flex-direction: column
   align-items: center
-  margin: 230px auto 360px
+  margin: auto
+  padding: 230px 0 360px
+@include desktop
+  .main
+    padding-top: 100px
+    padding-bottom: 150px
 
 .main__minititle
   font-size: 16px
@@ -13,10 +20,8 @@
 .main__button
   display: flex
   gap: 12px
-
   align-items: center
   justify-content: center
-  
 
 .main__subtitle
   font-size: 24px
@@ -25,3 +30,6 @@
   letter-spacing: 2px
   margin: 18px 0
 
+@include desktop
+  .main__subtitle
+    text-align: center
