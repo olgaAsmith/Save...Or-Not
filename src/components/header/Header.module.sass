@@ -21,6 +21,10 @@
   width: 56.1px
   height: 55px
 
+@include tablet
+  .header__logo
+      order: 0
+
 .header__content
   display: flex
   align-items: center
@@ -36,7 +40,8 @@
 
 @include tablet
   .header__content
-      display: none
+      flex-direction: row
+      order: 1
 
 .header__refs
   display: flex
@@ -56,3 +61,7 @@
 @include desktop
   .header__splitter
     display: none
+
+@include tablet
+  .header__splitter
+    display: block
