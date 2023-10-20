@@ -7,7 +7,7 @@ import { FC } from "react";
 const News: FC = () => {
   return (
     <section className={styles.subscribe}>
-      <div>
+      <div className={styles.subscribe__image}>
         <Image
           src={skull}
           alt="Древний драгоценный череп"
@@ -27,7 +27,7 @@ const News: FC = () => {
           email address. Everything else will be taken care of by us. We will
           send you emails containing information about game. We don’t spam.
         </p>
-        <form>
+        <form className={`${styles.subscribe__form}`}>
           <input
             className={`${styles.subscribe__input}`}
             type="email"

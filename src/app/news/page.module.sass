@@ -1,24 +1,42 @@
+@import "../../utils/styles/media"
+
 .subscribe
   width: calc( 100% - 240px )
   max-width: 1200px
-  min-height: 720px
+  min-height: 840px
   display: flex
   margin: auto
   padding-top: 20px
+@include desktop
+  .subscribe
+    width: calc( 100% - 60px )
 
 .subscribe__content
   margin-left: 62px
+  padding-right: 10px
+@include desktop
+  .subscribe__content
+    margin-left: 20px
+    padding: 0
+
 
 .subscribe__subtitle
   margin-top: 190px
+@include desktop
+  .subscribe__subtitle
+    margin-top: 70px
 
 .subscribe__title
   margin-top: 8px
 
 .subscribe__text
-  margin: 50px 0
+  margin: 50px 0 38px
+@include desktop
+  .subscribe__text
+    text-align: center
 
 .subscribe__input
+  box-sizing: border-box
   width: 372px
   height: 60px
   border-radius: 5px
@@ -29,6 +47,7 @@
   font-weight: 400
   line-height: normal
   padding-left: 22px
+  margin-right: 12px
   ::placeholder
     font-size: 14px
     font-weight: 400
@@ -36,4 +55,26 @@
     opacity: .5
 
 .subscribe__button
-  margin-left: 12px
+  margin-top: 12px
+@include desktop
+  .subscribe__input, .subscribe__button
+    margin: 12px auto 0
+@include phone
+  .subscribe__input, .subscribe__button
+    width: 100%
+
+@include desktop
+  .subscribe__form
+    display: flex
+    flex-direction: column
+
+@include desktop
+  .subscribe__image 
+    img
+      width: 320px
+      height: 520px
+
+@include tablet
+  .subscribe__image 
+    img
+      display: none
