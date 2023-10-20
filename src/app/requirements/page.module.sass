@@ -1,3 +1,5 @@
+@import "../../utils/styles/media"
+  
 .requirements
   width: calc( 100% - 240px )
   max-width: 1200px
@@ -6,12 +8,19 @@
   background-image: url('../../images/bg_image4.jpg')
   background-size: contain
   background-repeat: no-repeat 
+@include desktop
+  .requirements
+    width: calc( 100% - 60px )
+    background-image: none  
 
 .requirements__subtitle
   display: block
   width: 100%
   text-align: center
   margin-top: 145px
+@include desktop
+  .requirements__subtitle
+    margin-top: 70px
 
 .requirements__title
   display: block
@@ -24,18 +33,29 @@
   font-size: 24px
   line-height: normal
   letter-spacing: 2px
+@include desktop
+  .requirements__item
+    font-size: 20px
 
 .requirements__text
   display: block
   margin-top: 8px
-
+@include desktop
+  .requirements__text
+    font-size: 14px
 .requirements__list
   width: 572px
   display: grid
   grid-template-columns: repeat(2, 1fr)
   grid-template-rows: 127px
   margin-top: 140px
-
+@include desktop
+  .requirements__list
+    margin-top: 30px
+@include desktop
+  .requirements__list
+    width: 100%
+    grid-template-rows: min-content
 
 .requirements__element
   border: 1px solid rgb(151, 151, 151, .2)
