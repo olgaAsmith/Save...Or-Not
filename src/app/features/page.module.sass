@@ -1,22 +1,41 @@
+@import "../../utils/styles/media"
+
 .features
   width: calc( 100% - 240px)
   max-width: 1200px
   margin: auto
-  min-height: 960px
+  height: 960px
   background-image: url('../../images/bg_image3.jpg')
   background-size: contain
   background-repeat: no-repeat 
   display: flex
+@include desktop
+  .features
+    width: calc( 100% - 60px)
+    height: 640px
+@include tablet
+  .features
+    background-image: none
 
 .features__container
   width: 50%
+@include tablet
+  .features__container
+    display: none
 
 .features__content
   width: 50%
   margin-left: 200px
+@include tablet
+  .features__content
+    width: 100%
+    margin: 0 auto
 
 .features__subtitle
   margin-top: 171px
+@include desktop
+  .features__subtitle
+    margin-top: 70px
 
 .features__title
   margin-top: 8px

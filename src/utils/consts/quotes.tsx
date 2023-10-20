@@ -5,11 +5,11 @@ import { StaticImageData } from "next/image";
 
 type Quote = {
   id: number;
-  name: string,
-  about: string,
-  message: string,
-  data: string,
-  avatar: StaticImageData,
+  name: string;
+  about: string;
+  message: string;
+  data: string;
+  avatar: StaticImageData;
 };
 
 export const initialQuotes: Quote[] = [

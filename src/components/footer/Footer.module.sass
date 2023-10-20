@@ -6,7 +6,6 @@
   display: flex
   flex-direction: column
   padding-bottom: 52px
-
 @include desktop
   .footer
     width: calc( 100% - 60px)
@@ -15,7 +14,6 @@
   display: flex
   justify-content: space-between
   align-items: baseline
-
 @include desktop
   .footer__block
     flex-direction: column-reverse
@@ -25,7 +23,6 @@
 .footer__logo
   width: 92px
   height: 90px
-
 @include desktop
   .footer__logo
     display: none
@@ -61,7 +58,6 @@
   display: inline-block
   height: 12px
   opacity: 1
-
 @include phone
   .footer__splitter
       display: none
@@ -84,7 +80,6 @@
     
 .footer__underlist
   gap: 8px
-
 @include phone
   .footer__underlist
       display: flex
@@ -98,11 +93,12 @@
   line-height: normal
   letter-spacing: 1.2px
   text-transform: uppercase
-
 @include tablet
   .footer__doc
       font-size: 11px
       text-align: center
+@include phone
+  .footer__doc
       padding: 0
 
 .footer__item

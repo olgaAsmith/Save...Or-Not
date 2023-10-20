@@ -1,13 +1,23 @@
+@import "../../utils/styles/media"
+
 .features__list
   display: flex
   flex-direction: column
   gap: 29px
+@include desktop
+  .features__list
+      padding-top: 20px
 
 .features__name
   color: #FFB548
   font-size: 36px
   line-height: normal
   letter-spacing: 2px
+@include desktop
+  .features__name
+      font-size: 24px
+      text-align: center
+
 
 .features__text_invisible
   opacity: 0
@@ -21,6 +31,18 @@
   opacity: 1
   max-height: 100px
   transition: opacity 6s, max-height 3s
+@include tablet
+  .features__text_invisible, .features__text_visible, .features__text
+    width: 60%
+    margin: auto
+@include phone
+  .features__text
+      width: 100%
+
+@include desktop
+  .features__text
+      text-align: center
+      font-size: 14px
 
 .features__item
   position: relative
@@ -65,3 +87,7 @@
   top: 170px
   height: 0
   transition: top 2s, height 2.5s
+
+@include desktop
+  .features__line, .features__circle_active, .features__circle
+      display: none

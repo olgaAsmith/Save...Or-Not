@@ -3,24 +3,25 @@ import styles from "./Navigation.module.sass";
 import { FC, useState } from "react";
 
 const Navigation: FC = () => {
-
   //* menu toggle burger
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
   const clickOnBurgerMenu = () => {
-    setIsBurgerMenuOpen(!isBurgerMenuOpen)
-  }
+    setIsBurgerMenuOpen(!isBurgerMenuOpen);
+  };
 
   return (
     <nav className={styles.nav}>
-       <div
+      <div
         className={`${
-          isBurgerMenuOpen
-            ? styles.header__burgerActive
-            : styles.header__burger
+          isBurgerMenuOpen ? styles.header__burgerActive : styles.header__burger
         }`}
         onClick={clickOnBurgerMenu}
       ></div>
-      <ul className={`${styles.header__menu} ${isBurgerMenuOpen ? styles.header__menuActive : ''}`}>
+      <ul
+        className={`${styles.header__menu} ${
+          isBurgerMenuOpen ? styles.header__menuActive : ""
+        }`}
+      >
         <li>
           <Link className="link" href="./">
             Main
