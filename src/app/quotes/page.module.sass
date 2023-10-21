@@ -30,6 +30,9 @@
         margin: auto
         padding: 0
         padding-bottom: 50px
+@include tablet
+    .quotes__content
+        width: 100%
 
 .quotes__subtitle
     margin-top: 133px
@@ -43,7 +46,7 @@
 
 .quotes__text
     margin: 50px 0
-@include desktopXL
+@include desktop
   .quotes__text
     text-align: center
 
@@ -64,6 +67,7 @@
         justify-content: space-around
         flex-direction: row
         flex-wrap: wrap
+        height: min-content
 
 @include desktop
     .quotes__button

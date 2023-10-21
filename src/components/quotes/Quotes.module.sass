@@ -2,7 +2,7 @@
 
 .quotes__area
     width: 434px
-    height: 174px
+    min-height: 174px
     display: flex
     flex-direction: column
     padding: 16px
@@ -10,7 +10,15 @@
     background: rgba(255, 255, 255, 0.08)
     &:nth-child(odd)
         margin-left: auto
-
+@include desktop
+    .quotes__area
+        width: 380px
+        &:nth-child(odd)
+          margin-left: 0
+@include phone
+    .quotes__area
+        width: 100%
+        
 @keyframes moveRight
   from
     transform: translateX(0)
