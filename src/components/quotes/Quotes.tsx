@@ -21,9 +21,7 @@ const QuotesTwits: FC<QuotesTwitsProps> = ({
   message,
   data,
   isRound,
-  isLineAnimation,
 }) => {
-  console.log(isLineAnimation);
   return (
     <li
       className={` ${styles.quotes__area}

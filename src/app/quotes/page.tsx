@@ -23,7 +23,7 @@ const Quotes: FC = () => {
   }, []);
 
   useEffect(() => {
-    if (windowSize < 1281) {
+    if (windowSize < 1025) {
       setIsRound(false);
     } else {
       setIsRound(true);
@@ -31,7 +31,7 @@ const Quotes: FC = () => {
   }, [windowSize]);
 
   useEffect(() => {
-    if (windowSize > 1280) {
+    if (windowSize > 1024) {
     const intervalId = setInterval(() => {
       const firstElement = quotes[0];
       quotes.shift();
