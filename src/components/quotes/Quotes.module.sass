@@ -1,3 +1,5 @@
+@import "../../utils/styles/media"
+
 .quotes__area
     width: 434px
     min-height: 174px
@@ -20,7 +22,7 @@
     transform: translateX(0)    
   to
     transform:  translate(134px, -238px)
-        
+
 .quotes__area_round
     &:nth-child(odd)
         animation: moveRight 2s cubic-bezier(0.28, 0, 0.47, 0.61)
@@ -28,7 +30,6 @@
     &:nth-child(2n)
        animation: moveLeft 2s cubic-bezier(0.28, 0, 0.47, 0.61)
        animation-delay: 3s
-
 
 .quotes__user
     display: flex

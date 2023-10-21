@@ -1,3 +1,5 @@
+@import "../../utils/styles/media"
+    
 .quotes
   width: calc( 100% - 240px)
   max-width: 1200px
@@ -7,32 +9,50 @@
   background-size: contain
   background-repeat: no-repeat 
   display: flex
+@include desktopXL
+  .quotes
+    width: calc( 100% - 60px )
 
 .quotes__block
-    height: 657px
     margin: 152px 0
     width: 100%
     display: flex
+@include desktopXL
+    .quotes__block
+        flex-direction: column
+
 
 .quotes__content
-    width: calc( 50% - 16px)
+    width: 430px
+    padding-right: 16px
+@include desktopXL
+    .quotes__content
+        width: 50%
+        margin: auto
+        padding: 0
+        padding-bottom: 50px
 
 .quotes__subtitle
     margin-top: 133px
+@include desktopXL
+    .quotes__subtitle
+        margin-top: 0
 
 .quotes__title
     width: 100%
     margin-top: 9px
 
 .quotes__text
-    width: 434px
     margin: 50px 0
 
 .quotes__blocks
-    width: 50%
+    width: 600px
     height: 682px
     display: flex
     gap: 32px
+    margin-left: auto
     flex-direction: column
     overflow: hidden
-    
+@include desktopXL
+    .quotes__blocks  
+        margin: auto

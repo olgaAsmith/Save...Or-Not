@@ -11,6 +11,7 @@ interface QuotesTwitsProps {
   avatar: StaticImageData;
   data: string;
   isRound: boolean;
+  isLineAnimation: boolean;
 }
 
 const QuotesTwits: FC<QuotesTwitsProps> = ({
@@ -20,12 +21,14 @@ const QuotesTwits: FC<QuotesTwitsProps> = ({
   message,
   data,
   isRound,
+  isLineAnimation,
 }) => {
+  console.log(isLineAnimation);
   return (
     <li
-      className={` ${styles.quotes__area} ${
-        isRound ? styles.quotes__area_round : ""
-      }`}
+      className={` ${styles.quotes__area}
+      ${isRound ? styles.quotes__area_round : ""}
+      `}
     >
       <div className={`${styles.quotes__user}`}>
         <div className={`${styles.quotes__avatar}`}>

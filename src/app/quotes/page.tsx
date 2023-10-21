@@ -9,12 +9,29 @@ import { FC, useEffect, useState } from "react";
 const Quotes: FC = () => {
   const [quotes, setQuotes] = useState(initialQuotes);
   const [isRound, setIsRound] = useState(false);
-
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  
+  //*WINDOW SIZE -----
   useEffect(() => {
-    setIsRound(true);
+    const windowSize = () => {
+      setWindowSize(window.innerWidth);
+    };
+    window.addEventListener("resize", windowSize);
+    return () => {
+      window.removeEventListener("resize", windowSize);
+    };
   }, []);
 
   useEffect(() => {
+    if (windowSize < 1281) {
+      setIsRound(false);
+    } else {
+      setIsRound(true);
+    }
+  }, [windowSize]);
+
+  useEffect(() => {
+    if (windowSize > 1280) {
     const intervalId = setInterval(() => {
       const firstElement = quotes[0];
       quotes.shift();
@@ -24,7 +41,7 @@ const Quotes: FC = () => {
     return () => {
       clearInterval(intervalId);
     };
-  }, [quotes]);
+  }}, [quotes, windowSize]);
 
   return (
     <section className={styles.quotes}>
