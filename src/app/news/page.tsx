@@ -1,10 +1,24 @@
+'use client'
+
 import styles from "./page.module.sass";
 import Image from "next/image";
 import skull from "@/images/skull.jpg";
 import { bebas } from "@/utils/fonts";
-import { FC } from "react";
+import { FC, FormEvent, useState, ChangeEvent } from "react";
 
 const News: FC = () => {
+
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value)
+  }
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const userEmail = inputValue;
+  }
+
   return (
     <section className={styles.subscribe}>
       <div className={styles.subscribe__image}>
@@ -27,15 +41,20 @@ const News: FC = () => {
           email address. Everything else will be taken care of by us. We will
           send you emails containing information about game. We don’t spam.
         </p>
-        <form className={`${styles.subscribe__form}`}>
+        <form className={`${styles.subscribe__form}`}
+              action="#"
+              name='SubscribeToNews'
+              onSubmit={handleSubmit}
+              >
           <input
             className={`${styles.subscribe__input}`}
             type="email"
             name="subscribeEmail"
-            value=""
+            defaultValue=""
             placeholder="Your email address"
+            onChange={handleInputChange}
           ></input>
-          <button className={`${styles.subscribe__button} button`}>
+          <button className={`${styles.subscribe__button} button`} type='submit'>
             Subscribe now
           </button>
         </form>
@@ -45,3 +64,7 @@ const News: FC = () => {
 };
 
 export default News;
+function usestate(arg0: string): [any, any] {
+  throw new Error("Function not implemented.");
+}
+
