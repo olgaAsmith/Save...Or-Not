@@ -9,7 +9,7 @@
   position: fixed
   top: 0
   left: 0
-  background-color: rgba(0, 0, 0, .5)
+  background-color: rgba(0, 0, 0, .7)
   opacity: 0
   transform: scale(0)
   transition: .43s ease-out
@@ -25,6 +25,9 @@
   height: 200px
   background-color: #FFB548
   margin: auto
+@include tablet
+  .popup__container
+    margin: 0 30px 
 
 .popup__text
   width: 60%

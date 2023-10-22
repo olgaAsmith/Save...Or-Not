@@ -24,7 +24,7 @@ const closePopup = () => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const userEmail = inputValue;
-    setPopupMessage(`WoW!!! Thank You for subscribe to us on your mail ${userEmail}`)
+    setPopupMessage(`Congratulations, you have just subscribed to us. Wait for news on your mail ${userEmail}`)
     setIsisPopupActive(true);
   }
 
