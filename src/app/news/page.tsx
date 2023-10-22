@@ -5,10 +5,17 @@ import Image from "next/image";
 import skull from "@/images/skull.jpg";
 import { bebas } from "@/utils/fonts";
 import { FC, FormEvent, useState, ChangeEvent } from "react";
+import Popup from "@/components/popup/Popup";
 
 const News: FC = () => {
 
   const [inputValue, setInputValue] = useState('');
+  const [isPopupActive, setIsisPopupActive] = useState(false);
+  const [popupMessage, setPopupMessage] = useState('');
+  
+const closePopup = () => {
+  setIsisPopupActive(false);
+}
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value)
@@ -17,6 +24,8 @@ const News: FC = () => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const userEmail = inputValue;
+    setPopupMessage(`WoW!!! Thank You for subscribe to us on your mail ${userEmail}`)
+    setIsisPopupActive(true);
   }
 
   return (
@@ -53,12 +62,18 @@ const News: FC = () => {
             defaultValue=""
             placeholder="Your email address"
             onChange={handleInputChange}
+            required
           ></input>
           <button className={`${styles.subscribe__button} button`} type='submit'>
             Subscribe now
           </button>
         </form>
       </div>
+      <Popup 
+      isPopupActive={isPopupActive}
+      popupMessage={popupMessage} 
+      closePopup={closePopup}
+      />
     </section>
   );
 };

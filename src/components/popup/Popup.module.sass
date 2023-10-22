@@ -1,0 +1,59 @@
+@import "../../utils/styles/media"
+
+.popup 
+  display: flex
+  width: 100%
+  height: 100%
+  justify-content: center
+  align-items: center
+  position: fixed
+  top: 0
+  left: 0
+  background-color: rgba(0, 0, 0, .5)
+  opacity: 0
+  transform: scale(0)
+  transition: .43s ease-out
+
+.popup_active
+  opacity: 1  
+  transform: scale(1)
+
+.popup__container
+  position: relative
+  display: flex
+  width: 500px
+  height: 200px
+  background-color: #FFB548
+  margin: auto
+
+.popup__text
+  width: 60%
+  margin: auto
+  text-align: center
+
+.popup__close 
+  position: absolute
+  width: 32px
+  height: 32px
+  top: 5px
+  right: 5px
+  background-color: transparent
+  margin: 0 auto
+  &:before
+    content: ""
+    width: 41px
+    height: 4.5px
+    position: absolute
+    top: 12px
+    left: -4px
+    background: #FFF
+    rotate: -45deg
+  &:after
+    content: ""
+    width: 41px
+    height: 4.5px
+    position: absolute
+    top: 12px
+    left: -4px
+    background: #FFF
+    rotate: 45deg
