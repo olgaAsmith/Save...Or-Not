@@ -10,7 +10,7 @@ const Quotes: FC = () => {
   const [quotes, setQuotes] = useState(initialQuotes);
   const [isRound, setIsRound] = useState(false);
   const [windowSize, setWindowSize] = useState(window.innerWidth);
-  
+
   //*WINDOW SIZE -----
   useEffect(() => {
     const windowSize = () => {
@@ -32,16 +32,17 @@ const Quotes: FC = () => {
 
   useEffect(() => {
     if (windowSize > 1024) {
-    const intervalId = setInterval(() => {
-      const firstElement = quotes[0];
-      quotes.shift();
-      quotes.push(firstElement);
-      setQuotes([...quotes]);
-    }, 5000);
-    return () => {
-      clearInterval(intervalId);
-    };
-  }}, [quotes, windowSize]);
+      const intervalId = setInterval(() => {
+        const firstElement = quotes[0];
+        quotes.shift();
+        quotes.push(firstElement);
+        setQuotes([...quotes]);
+      }, 5000);
+      return () => {
+        clearInterval(intervalId);
+      };
+    }
+  }, [quotes, windowSize]);
 
   return (
     <section className={styles.quotes}>

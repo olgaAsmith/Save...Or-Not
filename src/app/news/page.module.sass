@@ -47,11 +47,16 @@
   line-height: normal
   padding-left: 22px
   margin-right: 12px
-  ::placeholder
+  &:placeholder
     font-size: 14px
     font-weight: 400
     line-height: normal
     opacity: .5
+  &:focus
+    outline: none
+    border: 2px solid #FFB548
+  &:hover
+    cursor: pointer
 
 .subscribe__button
   margin-top: 12px
@@ -77,3 +82,13 @@
   .subscribe__image 
     img
       display: none
+
+.subscribe__span
+  display: block
+  height: 20px
+  color: red
+  font-size: 12px
+  font-weight: 700
+@include desktop
+  .subscribe__span
+    margin: auto
