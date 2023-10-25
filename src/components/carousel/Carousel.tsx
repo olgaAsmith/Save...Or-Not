@@ -16,37 +16,42 @@ const Gallery: FC = () => {
       <Carousel>
         <div>
         <Image
+            className={styles.image__carousel}
             src={galleryImage1}
             alt="Location screenshot"
-            style={{ borderRadius: "6px", width: '90%', height: '608.633px' }}
+            style={{ borderRadius: "6px", objectFit: 'cover' }}
           />
         </div>
         <div>
         <Image
+            className={styles.image__carousel}
             src={galleryImage2}
             alt="Location screenshot"
-            style={{ borderRadius: "6px", width: '90%', height: '608.633px' }}
+            style={{ borderRadius: "6px", objectFit: 'cover' }}
           />
         </div>
         <div>
         <Image
+            className={styles.image__carousel}
             src={galleryImage3}
             alt="Location screenshot"
-            style={{ borderRadius: "6px", width: '90%', height: '608.633px' }}
+            style={{ borderRadius: "6px", objectFit: 'cover' }}
           />
         </div>
         <div>
         <Image
+            className={styles.image__carousel}
             src={galleryImage1}
             alt="Location screenshot"
-            style={{ borderRadius: "6px", width: '90%', height: '608.633px'}}
+            style={{ borderRadius: "6px", objectFit: 'cover'}}
           />
         </div>
         <div>
         <Image
             src={galleryImage2}
             alt="Location screenshot"
-            style={{ borderRadius: "6px", width: '90%', height: '608.633px' }}
+            className={styles.image__carousel}
+            style={{ borderRadius: "6px", objectFit: 'cover' }}
           />
         </div>
       </Carousel>

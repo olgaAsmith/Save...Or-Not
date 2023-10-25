@@ -5,7 +5,19 @@
 @include desktopXL
     .carousel
         margin: auto
-        
+@include tablet
+    .carousel
+        width: 100%
+
 .carousel__image
     width: 502px
     height: 610px
+
+.image__carousel
+    height: 610px 
+@include desktopXL
+    .image__carousel
+      height: 600px 
+@include desktop
+    .image__carousel
+      height: 440px 

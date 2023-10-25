@@ -14,14 +14,20 @@
   .about
     width: calc( 100% - 60px )
     flex-direction: column
+    padding-top: 40px
 
 .about__content
   width: 50%
   height: 610px
-  padding-right: 40px
+  padding-right: 60px
 @include desktopXL
   .about__content
       margin: auto
+      height: min-content
+      padding: 0 0 40px 0
+@include tablet
+  .about__content
+      width: 100%
 
 .about__subtitle
   margin-top: 76px
@@ -39,4 +45,10 @@
   margin-top: 24px
   margin-left: 180px
   text-align: justify
-
+@include desktop
+  .about__text
+    text-align: center
+    margin: 24px auto
+@include phone
+  .about__text
+    width: 100%
