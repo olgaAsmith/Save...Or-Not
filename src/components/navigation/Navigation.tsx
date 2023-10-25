@@ -8,7 +8,9 @@ const Navigation: FC = () => {
   const clickOnBurgerMenu = () => {
     setIsBurgerMenuOpen(!isBurgerMenuOpen);
   };
-
+  const handleClickMenu = () => {
+    setIsBurgerMenuOpen(false);
+  }
   return (
     <nav className={styles.nav}>
       <div
@@ -23,32 +25,32 @@ const Navigation: FC = () => {
         }`}
       >
         <li>
-          <Link className="link" href="./">
+          <Link className="link" href="./" onClick={handleClickMenu}>
             Main
           </Link>
         </li>
         <li>
-          <Link className="link" href="./about">
+          <Link className="link" href="./about" onClick={handleClickMenu}>
             About
           </Link>
         </li>
         <li>
-          <Link className="link" href="./features">
+          <Link className="link" href="./features" onClick={handleClickMenu}>
             Game features
           </Link>
         </li>
         <li>
-          <Link className="link" href="./requirements">
+          <Link className="link" href="./requirements" onClick={handleClickMenu}>
             System requirements
           </Link>
         </li>
         <li>
-          <Link className="link" href="./news">
+          <Link className="link" href="./news" onClick={handleClickMenu}>
             News
           </Link>
         </li>
         <li>
-          <Link className="link" href="./quotes">
+          <Link className="link" href="./quotes" onClick={handleClickMenu}>
             Quotes
           </Link>
         </li>
