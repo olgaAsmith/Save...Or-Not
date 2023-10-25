@@ -13,10 +13,11 @@ const Navigation: FC = () => {
   const handleClickMenu = () => {
     setIsBurgerMenuOpen(false);
   }
+  const linked = useSelectedLayoutSegment()
 
   //* active link
   const isActive = (href: string) => {
-    return useSelectedLayoutSegment() === href ? 'nav__active' : '';
+    return linked === href ? 'nav__active' : '';
   };
 
   return (
