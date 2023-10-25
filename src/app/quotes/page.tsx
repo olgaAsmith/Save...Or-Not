@@ -9,7 +9,7 @@ import { FC, useEffect, useState } from "react";
 const Quotes: FC = () => {
   const [quotes, setQuotes] = useState(initialQuotes);
   const [isRound, setIsRound] = useState(false);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [windowSize, setWindowSize] = useState(0);
 
   //*WINDOW SIZE -----
   useEffect(() => {
