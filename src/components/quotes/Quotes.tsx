@@ -11,7 +11,6 @@ interface QuotesTwitsProps {
   avatar: StaticImageData;
   data: string;
   isRound: boolean;
-  isLineAnimation: boolean;
 }
 
 const QuotesTwits: FC<QuotesTwitsProps> = ({
