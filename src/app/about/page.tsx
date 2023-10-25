@@ -5,6 +5,7 @@ import galleryImage2 from "@/images/gallery_image2.jpg";
 import galleryImage3 from "@/images/gallery_image3.jpg";
 import { bebas } from "@/utils/fonts";
 import { FC } from "react";
+import Gallery from "@/components/carousel/Carousel";
 
 const About: FC = () => {
   return (
@@ -27,39 +28,7 @@ const About: FC = () => {
           death.
         </p>
       </div>
-      <div className={`${styles.about__content} ${styles.about__gallery}`}>
-        <div className={`${styles.about__image} ${styles.about__image_first}`}>
-          <Image
-            src={galleryImage1}
-            alt="Location screenshot"
-            style={{ borderRadius: "6px" }}
-          />
-        </div>
-        <div className={`${styles.about__image} ${styles.about__image_second}`}>
-          <Image
-            src={galleryImage2}
-            alt="Location screenshot"
-            style={{ borderRadius: "6px" }}
-          />
-        </div>
-        <div className={`${styles.about__image} ${styles.about__image_third}`}>
-          <Image
-            src={galleryImage3}
-            alt="Location screenshot"
-            style={{ borderRadius: "6px" }}
-          />
-        </div>
-        <div className={styles.about__arrow}></div>
-        <div className={styles.about__toggler}>
-          <button className={`${styles.about__switcher}`}></button>
-          <button className={`${styles.about__switcher}`}></button>
-          <button className={`${styles.about__switcher}`}></button>
-          <button
-            className={`${styles.about__switcher} ${styles.about__switcher_active}`}
-          ></button>
-          <button className={`${styles.about__switcher}`}></button>
-        </div>
-      </div>
+      <Gallery />
     </section>
   );
 };
