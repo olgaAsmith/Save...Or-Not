@@ -12,7 +12,7 @@ import galleryImage3 from "@/images/gallery_image3.jpg";
 const Gallery: FC = () => {
   return (
     <div className={styles.carousel}>
-      <Carousel>
+      <Carousel autoPlay>
         <div>
           <Image
             className={styles.image__carousel}
