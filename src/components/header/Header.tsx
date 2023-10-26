@@ -9,7 +9,7 @@ import SelectLanguage from "../SelectLanguage/SelectLanguage";
 const Header: FC = () => {
   return (
     <header className={styles.header}>
-      <Link href="#" className={`${styles.header__logo} link logo`}></Link>
+      <Link href="/" className={`${styles.header__logo} link logo`}></Link>
       <Navigation />
       <div className={styles.header__content}>
         <SelectLanguage />
@@ -19,13 +19,13 @@ const Header: FC = () => {
         <ul className={styles.header__refs}>
           <li>
             <Link
-              href="/"
+              href="#!"
               className={`${styles.header__link_ref} ${styles.link_xbox} link`}
             ></Link>
           </li>
           <li>
             <Link
-              href="/"
+              href="#!"
               className={`${styles.header__link_ref} ${styles.link_steam} link`}
             ></Link>
           </li>
