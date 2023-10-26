@@ -13,9 +13,10 @@ const Quotes: FC = () => {
 
   //*WINDOW SIZE -----
   useEffect(() => {
+    setWindowSize(window.innerWidth);
     const windowSize = () => {
       setWindowSize(window.innerWidth);
-    };
+      };
     window.addEventListener("resize", windowSize);
     return () => {
       window.removeEventListener("resize", windowSize);

@@ -41,7 +41,7 @@ const Navigation: FC = () => {
         <li>
           <Link
             className={`link ${isActive("about")}`}
-            href="./about"
+            href="/nextjs-github-pages/about"
             onClick={handleClickMenu}
           >
             About
