@@ -16,7 +16,7 @@ const Quotes: FC = () => {
     setWindowSize(window.innerWidth);
     const windowSize = () => {
       setWindowSize(window.innerWidth);
-      };
+    };
     window.addEventListener("resize", windowSize);
     return () => {
       window.removeEventListener("resize", windowSize);
