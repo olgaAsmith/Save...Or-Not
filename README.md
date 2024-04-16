@@ -6,7 +6,7 @@
 2. Установка - 'npm install' или 'yarn install'
 
 
-#### Сcылка на проект [https://olgaasmith.github.io/BrightTech/](https://olgaasmith.github.io/Save...Or-Not/)
+#### Сcылка на проект https://olgaasmith.github.io/Save...Or-Not/
 
 --------
 ### SPA (React, TS, Next)
